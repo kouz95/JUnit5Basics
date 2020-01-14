@@ -5,12 +5,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class MathUtilsTest {
 	MathUtils mathUtils;
 
 	@BeforeAll
-	static void beforeAllInit() {
+	void beforeAllInit() {
 		System.out.print("This needs to run before all");
 	}
 
